@@ -56,15 +56,7 @@
     <ul class="news-list">
       <li>
         <time datetime="2025-09-01">2025‑09‑01</time>
-        &nbsp;— AIDA Lab launched at Kyung Hee University. Prof. Suwan Kim joins as Assistant Professor.
-      </li>
-      <li>
-        <time datetime="2025-09-01">2025‑09‑01</time>
-        &nbsp;— We are recruiting motivated graduate and undergraduate students. See <a href="apply.html">Apply/Contact</a>.
-      </li>
-      <li>
-        <time datetime="2025-09-15">2025‑09‑15</time>
-        &nbsp;— Website goes live with initial pages: Research, People, Publications, and Gallery.
+        &nbsp;— We are recruiting motivated graduate and undergraduate students. Contact prof. Suwan Kim via <a href="mailto:suwankim@khu.ac.kr">suwankim@khu.ac.kr</a>.
       </li>
       <!-- Add more items as needed -->
     </ul>
@@ -83,4 +75,69 @@
       <div class="card">
         <img src="assets/images/research1.png" alt="Machine learning for design optimization">
         <div class="card-content">
-          <h3>Machine‑learning base
+          <h3>Machine‑learning based Optimization</h3>
+          <p>Our work investigates using machine learning to predict performance metrics and optimize designs. This approach reduces the number of expensive simulations required and enables designers to converge to high‑quality solutions more efficiently.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/images/research1.png" alt="AI‑aided EDA tools">
+        <div class="card-content">
+          <h3>AI‑aided Design Tools</h3>
+          <p>We build intelligent CAD/EDA tools that assist engineers throughout the design workflow. By embedding AI modules into existing software, we aim to automate routine tasks and provide data‑driven suggestions, speeding up innovation cycles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 AIDA Lab, Kyung Hee University. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Toggle the navigation menu on small screens
+    function toggleMenu() {
+      const nav = document.getElementById('nav-menu');
+      nav.classList.toggle('active');
+    }
+  </script>
+  
+  <style>
+  #visitor-badge{
+    position:fixed; right:12px; bottom:12px;
+    background:rgba(0,0,0,.75); color:#fff;
+    padding:.5rem .75rem; border-radius:.5rem;
+    font:600 12px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    z-index:9999; box-shadow:0 6px 18px rgba(0,0,0,.25);
+  }
+</style>
+
+<script>
+  (async () => {
+    // Change these to something unique (only ASCII letters/numbers/hyphens)
+    const NS  = 'aida-lab-suwankim';
+    const KEY = 'site-total';
+
+    try {
+      // This increments the counter and returns the current value.
+      // NOTE: This is a public endpoint; fine for a lightweight counter.
+      const res  = await fetch(`https://api.countapi.xyz/hit/${NS}/${KEY}`);
+      const data = await res.json();
+
+      // Stash the latest value for any future use
+      window.__aidaVisitorCount = data.value;
+
+      // Show badge only if your browser has the admin flag set
+      if (localStorage.getItem('aidaAdmin') === '1') {
+        const b = document.createElement('div');
+        b.id = 'visitor-badge';
+        b.textContent = `Visitors: ${data.value.toLocaleString()}`;
+        document.body.appendChild(b);
+      }
+    } catch (e) {
+      // Silently ignore failures so visitors never see errors
+      console.debug('visitor counter error:', e);
+    }
+  })();
+</script>
+</body>
+</html>
