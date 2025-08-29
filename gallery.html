@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery – AIDA Lab</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="description" content="Gallery of events, projects and moments from the AIDA Lab. Photos will be added soon.">
+</head>
+<body>
+  <header>
+    <h1>AIDA Lab</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="people/index.html">People</a>
+      <a href="publications.html">Publications</a>
+      <a href="apply.html">Apply/Contact</a>
+      <a href="gallery.html" class="current">Gallery</a>
+    </nav>
+  </header>
+
+  <section class="container">
+    <h2>Gallery</h2>
+    <p>
+      We will share photos of our lab activities, projects and events here.  As the AIDA Lab is just getting started, no images are available yet.  Please check back later for updates!
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 AIDA Lab, Kyung Hee University. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-menu');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

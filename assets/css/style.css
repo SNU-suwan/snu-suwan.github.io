@@ -1,0 +1,295 @@
+/*
+ * Stylesheet for the AIDA (AI‑aided Design Automation) lab website.
+ *
+ * The design uses a simple, modern layout inspired by many university
+ * research group pages. A neutral light colour palette and generous
+ * spacing provide a clean canvas for the content. Flexbox is used to
+ * build the responsive navigation and grid layouts so that the site
+ * looks good on both desktop and mobile devices. Adjust colours,
+ * typography and spacing here to tailor the look and feel of the site.
+ */
+
+/* Colour palette */
+:root {
+  --primary: #1a2b49;       /* dark blue for headers and navigation */
+  --secondary: #3d5a80;     /* medium blue for accents */
+  --accent: #ee6c4d;        /* coral accent colour */
+  --light-bg: #f5f8fc;      /* very light blue background */
+  --text-colour: #333333;   /* dark text for readability */
+  --heading-colour: #1a2b49;
+}
+
+/* Global resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+  color: var(--text-colour);
+  background-color: var(--light-bg);
+  scroll-behavior: smooth;
+}
+
+/* Header and navigation */
+header {
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  position: relative;
+  padding: 0.25rem 0;
+}
+
+/* Highlight the current navigation link */
+nav a.current {
+  font-weight: 600;
+  border-bottom: 2px solid var(--accent);
+}
+
+nav a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: var(--accent);
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Hero section */
+.hero {
+  background: url('../images/hero.png') center/cover no-repeat;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.hero .hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+.hero h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #f8f8f8;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Section headings */
+section h2 {
+  color: var(--heading-colour);
+  margin-bottom: 0.75rem;
+  font-size: 1.8rem;
+  border-left: 4px solid var(--accent);
+  padding-left: 0.6rem;
+}
+
+/* Cards / research items */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card .card-content {
+  padding: 1rem;
+  flex: 1;
+}
+
+.card .card-content h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: var(--primary);
+}
+
+.card .card-content p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* People page styles */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profile img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  background: #e0e0e0;
+}
+
+.profile h3 {
+  font-size: 1.4rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.profile p {
+  font-size: 0.95rem;
+  max-width: 600px;
+}
+
+/* Publications table */
+.pub-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.pub-table th,
+.pub-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.pub-table th {
+  background-color: var(--secondary);
+  color: white;
+  text-align: left;
+}
+
+.pub-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary);
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: 2rem;
+}
+
+/* Responsive nav toggle (for small screens) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-basis: 100%;
+    margin-top: 1rem;
+    display: none;
+    flex-direction: column;
+  }
+
+  nav a {
+    margin: 0.5rem 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav.active {
+    display: flex;
+  }
+}

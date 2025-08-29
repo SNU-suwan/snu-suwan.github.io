@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>People – AIDA Lab</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <meta name="description" content="Meet the people behind the AI‑aided Design Automation (AIDA) Lab. Learn about our professor and how to join the team as a student.">
+</head>
+<body>
+  <header>
+    <h1>AIDA Lab</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="nav-menu">
+      <a href="../index.html">Home</a>
+      <a href="../research.html">Research</a>
+      <a href="people/index.html" class="current">People</a>
+      <a href="../publications.html">Publications</a>
+      <a href="../apply.html">Apply/Contact</a>
+      <a href="../gallery.html">Gallery</a>
+    </nav>
+  </header>
+
+  <section class="container">
+    <h2>Our Team</h2>
+    <p>
+      The AIDA Lab is led by a dedicated faculty member and will be home to motivated students and researchers passionate about AI and design.  Explore the links below to learn more about our professor and opportunities for students.
+    </p>
+    <div class="cards">
+      <a href="professor.html" style="text-decoration:none; color:inherit;">
+        <div class="card">
+          <img src="../assets/images/research1.png" alt="Professor">
+          <div class="card-content">
+            <h3>Professor</h3>
+            <p>Meet our principal investigator and learn about their background, research interests and achievements.</p>
+          </div>
+        </div>
+      </a>
+      <a href="students.html" style="text-decoration:none; color:inherit;">
+        <div class="card">
+          <img src="../assets/images/research1.png" alt="Students">
+          <div class="card-content">
+            <h3>Students</h3>
+            <p>Read about current openings and how to join the AIDA Lab as a graduate or undergraduate student.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 AIDA Lab, Kyung Hee University. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-menu');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

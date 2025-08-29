@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research – AIDA Lab</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="description" content="Research areas at the AI‑aided Design Automation (AIDA) Lab include generative design, machine‑learning based design optimization, intelligent EDA tools and interactive AI for design.">
+</head>
+<body>
+  <header>
+    <h1>AIDA Lab</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="research.html" class="current">Research</a>
+      <a href="people/index.html">People</a>
+      <a href="publications.html">Publications</a>
+      <a href="apply.html">Apply/Contact</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+  </header>
+
+  <section class="container">
+    <h2>Research Overview</h2>
+    <p>
+      Our research aims to integrate artificial intelligence with automated design processes across multiple domains.  We draw inspiration from advances in AI‑aided electronic design automation and machine‑learning based optimization【86325014122364†L51-L76】, while exploring the potential of generative models to produce novel design candidates【685440112580855†L160-L168】.
+    </p>
+    <p>
+      The topics below highlight ongoing research directions at the AIDA Lab.  We believe that by combining data‑driven modelling, optimisation and human‑in‑the‑loop interaction, we can create tools that not only automate tedious tasks but also augment human creativity.
+    </p>
+  </section>
+
+  <section class="container">
+    <h2>Research Themes</h2>
+    <div class="cards">
+      <!-- Generative Design -->
+      <div class="card">
+        <img src="assets/images/research1.png" alt="Generative design illustration">
+        <div class="card-content">
+          <h3>Generative Design</h3>
+          <p>
+            We investigate generative artificial intelligence as a means of producing diverse design solutions.  Generative models learn from existing designs and create new samples that satisfy high‑level constraints.  This paradigm allows engineers to explore rich design spaces and uncover creative alternatives.  In the context of electronic circuits, mechanical parts or architectural layouts, generative algorithms can propose candidate designs which are then evaluated by simulators or human experts.
+          </p>
+        </div>
+      </div>
+      <!-- Machine‑learning based Optimization -->
+      <div class="card">
+        <img src="assets/images/research1.png" alt="Optimization illustration">
+        <div class="card-content">
+          <h3>Machine‑learning based Optimization</h3>
+          <p>
+            Traditional optimisation relies on expensive simulations or gradient evaluations.  We develop surrogate models that learn to approximate performance metrics and constraints from data, enabling efficient search for optimal designs.  By coupling these models with Bayesian optimisation or reinforcement learning, we reduce the number of costly evaluations and accelerate convergence to high‑performance solutions【86325014122364†L51-L76】.
+          </p>
+        </div>
+      </div>
+      <!-- AI‑aided EDA Tools -->
+      <div class="card">
+        <img src="assets/images/research1.png" alt="EDA tools illustration">
+        <div class="card-content">
+          <h3>AI‑aided Design Tools</h3>
+          <p>
+            Building on the tradition of computer‑aided design (CAD) and electronic design automation (EDA), we embed AI into design software to automate routine tasks.  Our tools can, for example, predict routing congestion, recommend component placements, or suggest parameter values based on prior data.  Such intelligent assistants aim to shorten design cycles and guide engineers toward better solutions.
+          </p>
+        </div>
+      </div>
+      <!-- Interactive AI for Design -->
+      <div class="card">
+        <img src="assets/images/research2.png" alt="Human‑AI interaction illustration">
+        <div class="card-content">
+          <h3>Interactive AI for Design</h3>
+          <p>
+            Beyond automation, we explore how AI can collaborate with human designers.  Interactive systems use natural language processing and reinforcement learning to interpret user intent and refine designs in real time.  These tools empower designers to communicate high‑level goals while leaving low‑level implementation to the AI, leading to a more intuitive and efficient workflow.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 AIDA Lab, Kyung Hee University. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-menu');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
